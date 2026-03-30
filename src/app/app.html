@@ -255,6 +255,12 @@
         </div>
         <h2>API Data:</h2>
         <pre>{{ data | json }}</pre>
+
+        <ul>
+          <li *ngFor="let user of users">
+            {{ user.name }}
+          </li>
+        </ul>
       </div>
 
     </div>

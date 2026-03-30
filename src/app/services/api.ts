@@ -7,11 +7,15 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class Api {
-   private baseUrl = environment.apiUrl;
+  private baseUrl = environment.apiUrl;
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   getTest(): Observable<any> {
     return this.http.get(`${this.baseUrl}/test`);
   }
+  getUsers() {
+    return this.http.get(`${this.baseUrl}/users`);
+  }
+
 }
